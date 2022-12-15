@@ -5,6 +5,7 @@ g = 5
 def on_forever():
     global x_strength, y_strength, g
     mouse.start_mouse_service()
+    keyboard.start_keyboard_service()
     x_strength = input.acceleration(Dimension.X)
     y_strength = input.acceleration(Dimension.Y)
     g = 10
@@ -192,5 +193,7 @@ def on_forever():
         mouse.click()
     if input.button_is_pressed(Button.B):
         mouse.right_click()
+    if input.button_is_pressed(Button.AB):
+        keyboard.send_string("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
     basic.clear_screen()
 basic.forever(on_forever)

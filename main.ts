@@ -4,6 +4,7 @@ let g = 5
 basic.forever(function on_forever() {
     
     mouse.startMouseService()
+    keyboard.startKeyboardService()
     x_strength = input.acceleration(Dimension.X)
     y_strength = input.acceleration(Dimension.Y)
     g = 10
@@ -233,6 +234,10 @@ basic.forever(function on_forever() {
     
     if (input.buttonIsPressed(Button.B)) {
         mouse.rightClick()
+    }
+    
+    if (input.buttonIsPressed(Button.AB)) {
+        keyboard.sendString("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww")
     }
     
     basic.clearScreen()
